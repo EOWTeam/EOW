@@ -1,0 +1,23 @@
+#!/bin/bash
+
+cd ..
+
+cleos wallet import 5Hynwpk7TMKuBdBG59KMYMCxBU1W3QbgSoQ7dSWYKfinHczVeQM
+#EOS8Dq9rUZrLnWmJZfakrUQhSW3Rm7e73K1StuBsCxpj6xNLLbbuT
+
+cleos wallet import 5JJFXcbDexUAfyarfvW5FJRboyRtDcmgM1RHpBMnKbY1n5SjWx5
+#EOS5BisJQyMeeQMfxA2sULSB82qXvDK6czZSggBT6oCjc8m75vkEZ
+
+cleos set contract build/contracts/eosio.bios -p eosio
+
+cleos create account eosio eosio.token EOS8Dq9rUZrLnWmJZfakrUQhSW3Rm7e73K1StuBsCxpj6xNLLbbuT EOS5BisJQyMeeQMfxA2sULSB82qXvDK6czZSggBT6oCjc8m75vkEZ
+
+cleos set contract eosio.token build/contracts/eosio.token -p eosio.token
+
+cleos create account eosio author EOS8Dq9rUZrLnWmJZfakrUQhSW3Rm7e73K1StuBsCxpj6xNLLbbuT EOS5BisJQyMeeQMfxA2sULSB82qXvDK6czZSggBT6oCjc8m75vkEZ
+
+cleos create account eosio reader EOS8Dq9rUZrLnWmJZfakrUQhSW3Rm7e73K1StuBsCxpj6xNLLbbuT EOS5BisJQyMeeQMfxA2sULSB82qXvDK6czZSggBT6oCjc8m75vkEZ
+
+cleos create account eosio gamecom EOS8Dq9rUZrLnWmJZfakrUQhSW3Rm7e73K1StuBsCxpj6xNLLbbuT EOS5BisJQyMeeQMfxA2sULSB82qXvDK6czZSggBT6oCjc8m75vkEZ
+
+cleos create account eosio team EOS8Dq9rUZrLnWmJZfakrUQhSW3Rm7e73K1StuBsCxpj6xNLLbbuT EOS5BisJQyMeeQMfxA2sULSB82qXvDK6czZSggBT6oCjc8m75vkEZ
